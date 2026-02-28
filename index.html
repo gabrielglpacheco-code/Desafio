@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+
+<!--
+Nome completo
+Email
+Idade
+Matérias: portugues, matemática, biologia, ciências, história, geografia e artes
+Turnos disponíveis (Mútipla Escolha): Matutino, Verpertino e Noturno
+Nível de escolaridade: Ensino superior completo, cursando mestrado, mestrado completo, cursando doutorado, doutorado completo
+Descrição sobre si mesmo (Máximo 200 caracteres)
+
+Form deve ter ID e Nome de "FORM"
+Nomes dos campos devem ser: NOME, IDADE, ASSUNTO, TURNOS DISPONÍVEIS, ESCOLARIDADE, DESCRIÇÃO
+O campo com as opções de matérias deve ter somente um ID também
+Código precisa ser semântico e com acessibilidade
+-->
+<body>
+
+    <section>
+
+        <h2>FORMULÁRIO </h2>
+
+        <form id="FORM" name="FORM" action="">
+
+            <label for="nome">Nome Completo: </label> <br>
+            <input type="text" id="nome" name="nome" required>
+            <br><br>
+
+            <label for="email">Email: </label> <br>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="idade">Idade: </label> <br>
+            <input type="number" id="idade" name="idade" min="0" max="120" required>
+            <br><br>
+
+            <label for="assunto">Para qual matéria você está se candidatando para lecionar?: </label>
+                <select name="assunto" id="assunto" required>
+                    <option value="">SELECIONE</option>
+                    <option value="portugues">PORTUGUÊS</option>
+                    <option value="matematica">MATEMÁTICA</option>
+                    <option value="biologia">BIOLOGIA</option>
+                    <option value="ciencias">CIÊNCIAS</option>
+                    <option value="historia">HISTÓRIA</option>
+                    <option value="geografia">GEOGRAFIA</option>
+                    <option value="artes">ARTES</option>
+                </select>
+                <br><br>
+
+            <label for="turno">TURNOS DISPONÍVEIS: </label> <br>
+
+                <input type="checkbox" id="manha" name="turno">
+                <label for="manha">MATUTINO</label> <br>
+
+                <input type="checkbox" id="tarde" name="turno">
+                <label for="tarde">VESPERTINO</label> <br>
+
+                <input type="checkbox" id="noite" name="turno">
+                <label for="noite">NOTURNO</label> <br> <br> 
+
+            <label for="escolaridade">Escolaridade: </label> <br>
+            
+                <select name="escolaridade" id="escolaridade" required>
+
+                    <option value="">SELECIONE</option>
+                    <option value="superior">SUPERIOR COMPLETO</option>
+                    <option value="cursando_mestrado">CURSANDO MESTRADO</option>
+                    <option value="mestrado">MESTRADO COMPLETO</option>
+                    <option value="cursando_doutorado">CURSANDO DOUTORADO</option>
+                    <option value="doutorado">DOUTORADO COMPLETO</option>
+
+                </select>
+                <br><br>
+
+            <label for="descricao">Descrição (máx. 200 caracteres): </label> <br>
+                <textarea name="descricao" id="descricao" cols="30" rows="10" maxlength="200" required ></textarea> <br> <br>
+
+            <input type="submit" value="ENVIAR FORMULÁRIO"> <br>
+
+        </form>
+
+    </section>
+    
+</body>
+</html>
